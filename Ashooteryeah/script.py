@@ -1,22 +1,17 @@
-#oop pragram that has methods :reverse an array,find an element, bubble sort
-
-class profile:
-
-    def __init__(self, name, age, sub):
-        self.name = name
-        self.age = age
-        self.sub = sub
-    def change(self, name, age, sub):
-        self.name = name
-        self.age = age
-        self.sub = sub
+#oop pragram to select a vehicle and display the price and change if required
+class vehicle:
+    def __init__(self, car, minivan, jeep):
+        self.car = car
+        self.minivan = minivan
+        self.jeep = jeep
+    def change(self, car, minivan, jeep):
+        self.car = car
+        self.minivan = minivan
+        self.jeep = jeep
 
 
-d = profile("steve",51,"apple")
-print(d.name,d.age,d.sub)
-
-d.change("mark",45,"meta")
-print(d.name,d.age,d.sub)
+v = vehicle(10000, 15000, 20000)
+print(v.car)
 
 
 
