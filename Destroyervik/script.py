@@ -1,21 +1,30 @@
-# OOP  program that has methods; reverse an array, find an element, bubble sort.
-
-class profile:
-
-    def __init__(self, name, age, sub):
-        self.name = name
-        self.age = age
-        self.sub = sub
-
-    def change(self, name, age, sub):
-        self.name = name
-        self.age = age
-        self.sub = sub
+# Data on model and price
+vehicles = ['car', 'minivan', 'jeep']
+price = [10000, 15000, 20000]
 
 
-d = profile('Elon', 35, 'physics')
+class vehicle:
 
-print(d.name, d.age, d.sub)
+    def __init__(self, model):
+        self.model = model
+        n = len(vehicles)
 
-d.change('Mark', 37, 'Facebook')
-print(d.name, d.age, d.sub)
+        for i in range(n):
+            if model == vehicles[i]:
+                self.price = price[i]
+                break
+        print(self.price)
+
+    def change(self, model):
+        self.model = model
+        n = len(vehicles)
+
+        for i in range(n):
+            if model == vehicles[i]:
+                self.price = price[i]
+                break
+        print(self.price)
+
+
+d = vehicle('jeep')
+d.change('car')
