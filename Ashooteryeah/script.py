@@ -1,34 +1,42 @@
+# Data on model and price
+vehicles = ['car', 'minivan', 'jeep']
+price = [10000, 15000, 20000]
 
 
-class bank:
-    def __init__(self,balance):
-        self.balance = balance
+class buy:
 
-    def withdraw(self,withdra):
-        self.balance = self.balance - withdra
-        print("You've successfully withdrawn",withdra,"from your account")
-        print("Remaining balance is ",self.balance)
+    # Selecting a model and displaying price
+    def __init__(self, model):
 
-    def deposit(self,dep):
-        self.balance = self.balance + dep
-        print("You've successfully deposited ",dep,"to your account")
-        print("Remaining balance is ",self.balance)
+        self.model = model.lower()
+        self.n = len(vehicles)
 
-    def transferr(self,transf,name):
-        self.balance = self.balance - transf
-        print("You succcessfully transferred ",transf," to ",name)
-        print("Remainin balance is ",self.balance)
+        for i in range(self.n):
+            if self.model == vehicles[i]:
+                self.price = price[i]
+                break
 
-b = bank(30000)
-print("")
+        print("You have chosen a", self.model)
+        print("Which costs", self.price)
 
-b.withdraw(5000)
-print("")
+    def change(self, model):
+        self.model = model.lower()
+        self.n = len(vehicles)
 
-b.deposit(2000)
-print("")
-b.transferr(1000, 'Elon')
-print("")
+        for i in range(self.n):
+            if self.model == vehicles[i]:
+                self.price = price[i]
+                break
+
+        print("You have changed to a", self.model)
+        print("Which costs", self.price)
+
+
+d = buy('car')
+d.change('jeep')
+d.change('minivan')
+
+
 
 
 
