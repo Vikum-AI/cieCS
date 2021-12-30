@@ -1,22 +1,36 @@
-#oop pragram that has methods :reverse an array,find an element, bubble sort
-
-class profile:
-
-    def __init__(self, name, age, sub):
-        self.name = name
-        self.age = age
-        self.sub = sub
-    def change(self, name, age, sub):
-        self.name = name
-        self.age = age
-        self.sub = sub
 
 
-d = profile("steve",51,"apple")
-print(d.name,d.age,d.sub)
+class bank:
+    def __init__(self,balance):
+        self.balance = balance
 
-d.change("mark",45,"meta")
-print(d.name,d.age,d.sub)
+    def withdraw(self,withdra):
+        self.balance = self.balance - withdra
+        print("You've successfully withdrawn",withdra,"from your account")
+        print("Remaining balance is ",self.balance)
+
+    def deposit(self,dep):
+        self.balance = self.balance + dep
+        print("You've successfully deposited ",dep,"to your account")
+        print("Remaining balance is ",self.balance)
+
+    def transferr(self,transf,name):
+        self.balance = self.balance - transf
+        print("You succcessfully transferred ",transf," to ",name)
+        print("Remainin balance is ",self.balance)
+
+b = bank(30000)
+print("")
+
+b.withdraw(5000)
+print("")
+
+b.deposit(2000)
+print("")
+b.transferr(1000, 'Elon')
+print("")
+
+
 
 
 
